@@ -445,9 +445,40 @@ body.theme-luka strong {
   color: var(--luka-text);
 }
 
+/* ===== Split layout: text left, image right ===== */
+.section-body.split {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.section-body.split .text {
+  flex: 1;
+}
+
+.section-body.split .image {
+  flex: 1;
+  text-align: right;
+}
+
+.section-body.split img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+
 @media (max-width: 1080px) {
   body.theme-luka .nav-container {
     padding: 0 20px;
+  }
+ /* 👇 ADD YOUR CODE RIGHT HERE */
+  .section-body.split {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .section-body.split .image {
+    text-align: center;
   }
 
   body.theme-luka .wrapper {
